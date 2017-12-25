@@ -30,5 +30,5 @@
 *.out
 *.app
 
-# Qt project files
-*.pro*
+# Qt user-specific project files
+*.user
