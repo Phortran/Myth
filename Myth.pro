@@ -3,6 +3,7 @@
 # Project created by QtCreator 2017-12-24T01:32:30
 #
 #-------------------------------------------------
+load(configure)
 
 QT       += core gui
 
@@ -44,3 +45,7 @@ INCLUDEPATH += $$SRCINCLUDEDIR
 # Build dir
 DESTDIR = $$BUILDDIR
 OBJECTS_DIR = $$BUILDDIR
+
+# Unit tests
+QMAKE_CONFIG_TESTS_DIR = test
+qtCompileTest(voidtest)
