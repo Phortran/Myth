@@ -27,6 +27,7 @@ SRCDIR = src
 SRCINCLUDEDIR = $$SRCDIR/include
 SRCUIDIR = $$SRCDIR/ui
 SRCUIFORMSDIR = $$SRCUIDIR/forms
+BUILDDIR = build
 
 SOURCES += \
         $$SRCDIR/main.cpp \
@@ -39,3 +40,7 @@ FORMS += \
         $$SRCUIFORMSDIR/guibase.ui
 
 INCLUDEPATH += $$SRCINCLUDEDIR
+
+# Build dir
+DESTDIR = $$BUILDDIR
+OBJECTS_DIR = $$BUILDDIR

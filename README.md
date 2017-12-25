@@ -7,13 +7,42 @@ required to attain goals or objectives.
 
 ## Install
 
-Qt5 libraries are necessary; a Makefile is provided, therefore to compile
-the sources it is sufficient to type
+This program uses the powerful features of qmake[1].
+Qmake can generate a makefile providing the correct linking with the QT libraries present
+on your machine and based various needs. To generate the `Makefile`, simply run
+
+```shell
+qmake
+```
+
+The QT suite contains both the libraries and the qmake tool and must hence be provided;
+it is multiplatform over every desktop system. Once the Makefile
+is generated,to compile the sources it is sufficient to type
+
 ```shell
 make
 ```
+
 in the command line and
+
 ```shell
 make install
 ```
+
 to install
+
+## Uninstall
+
+To clean the workspace leaving the executables
+```shell
+make clean
+```
+
+To bring the workspace back to its initial state
+```shell
+make distclean
+```
+
+---
+
+[1] [qmake](http://doc.qt.io/qt-5/qmake-overview.html)
