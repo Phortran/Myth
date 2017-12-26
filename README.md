@@ -29,7 +29,16 @@ in the command line and
 make install
 ```
 
-to install
+to install.
+
+### Unit test
+
+Unit tests are provided to check that everything is working properly; you can run
+all the test suite by issuing
+
+```shell
+make install
+```
 
 ## Uninstall
 
