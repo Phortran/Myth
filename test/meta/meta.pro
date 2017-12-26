@@ -11,6 +11,7 @@ QT       -= gui
 TARGET = tst_metatest
 CONFIG   += console
 CONFIG   -= app_bundle
+CONFIG   += testcase
 
 TEMPLATE = app
 

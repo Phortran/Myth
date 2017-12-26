@@ -44,7 +44,5 @@ INCLUDEPATH += $$INCLUDEDIR
 DESTDIR = $$BUILDDIR
 OBJECTS_DIR = $$BUILDDIR
 
-# Unit tests
-#QMAKE_CONFIG_TESTS_DIR = test
-#qtCompileTest(voidtest)
-#qtCompileTest(provatest3)
+RESOURCES += \
+    res.qrc

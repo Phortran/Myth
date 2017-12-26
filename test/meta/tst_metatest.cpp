@@ -8,8 +8,12 @@ public:
   MetaTest();
 
 private Q_SLOTS:
+  void initTestCase()
+  { qDebug("called before everything else"); }
   void testCase1();
   void testCase2();
+  void cleanupTestCase()
+  { qDebug("called after testCase1 and testCase2"); }
 };
 
 MetaTest::MetaTest() {}

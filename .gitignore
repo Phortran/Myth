@@ -35,6 +35,7 @@ Makefile
 
 # Qt user-specific project files
 *.user
+*.moc
 
 # Log files
 *.log
