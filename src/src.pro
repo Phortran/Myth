@@ -3,7 +3,6 @@
 # Project created by QtCreator 2017-12-24T01:32:30
 #
 #-------------------------------------------------
-load(configure)
 
 QT       += core gui
 
@@ -24,28 +23,28 @@ DEFINES += QT_DEPRECATED_WARNINGS
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 # Folders (using folder structure conventions)
-SRCDIR = src
-SRCINCLUDEDIR = $$SRCDIR/include
-SRCUIDIR = $$SRCDIR/ui
-SRCUIFORMSDIR = $$SRCUIDIR/forms
-BUILDDIR = build
+INCLUDEDIR = $$PWD/include
+UIDIR = $$PWD/ui
+UIFORMSDIR = $$UIDIR/forms
+BUILDDIR = $$PWD/../build
 
 SOURCES += \
-        $$SRCDIR/main.cpp \
-        $$SRCUIDIR/guibase.cpp
+        main.cpp \
+        $$UIDIR/guibase.cpp
 
 HEADERS += \
-        $$SRCINCLUDEDIR/guibase.h
+        $$INCLUDEDIR/guibase.h
 
 FORMS += \
-        $$SRCUIFORMSDIR/guibase.ui
+        $$UIFORMSDIR/guibase.ui
 
-INCLUDEPATH += $$SRCINCLUDEDIR
+INCLUDEPATH += $$INCLUDEDIR
 
 # Build dir
 DESTDIR = $$BUILDDIR
 OBJECTS_DIR = $$BUILDDIR
 
 # Unit tests
-QMAKE_CONFIG_TESTS_DIR = test
-qtCompileTest(voidtest)
+#QMAKE_CONFIG_TESTS_DIR = test
+#qtCompileTest(voidtest)
+#qtCompileTest(provatest3)
