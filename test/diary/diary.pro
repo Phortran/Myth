@@ -1,14 +1,8 @@
-#-------------------------------------------------
-#
-# Project created by QtCreator 2017-12-26T02:29:19
-#
-#-------------------------------------------------
-
 QT       += testlib
 
 QT       -= gui
 
-TARGET    = tst_metatest
+TARGET    = tst_diarytest
 CONFIG   += console
 CONFIG   -= app_bundle
 CONFIG   += testcase
@@ -28,7 +22,7 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 
 SOURCES += \
-        tst_metatest.cpp 
+        tst_diarytest.cpp 
 
 DEFINES += SRCDIR=\\\"$$PWD/\\\"
 
@@ -36,3 +30,8 @@ INCLUDEPATH += \
     $$PWD/../../src/include
 
 DESTDIR = $$PWD/../../build
+OBJECTS_DIR = $$DESTDIR
+
+OBJECTS += \
+    $$OBJECTS_DIR/Diary.o \
+    $$OBJECTS_DIR/SMARTobj.o

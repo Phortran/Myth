@@ -1,5 +1,4 @@
-#include <QString>
-#include <QtTest>
+#include "test.hpp"
 
 class MetaTest : public QObject {
   Q_OBJECT
@@ -23,6 +22,7 @@ void MetaTest::testCase1() {
 }
 
 void MetaTest::testCase2() {
+  QEXPECT_FAIL("", "Example of failing test (won't abort testing)", Continue);
   QVERIFY2(false, "Failure");
 }
 
