@@ -4,4 +4,5 @@ CONFIG += ordered
 
 SUBDIRS = \
     src \
-    test/meta
+    test/meta \
+    test/diary
