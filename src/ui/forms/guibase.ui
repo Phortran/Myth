@@ -6,21 +6,28 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>400</width>
-    <height>300</height>
+    <width>1000</width>
+    <height>700</height>
    </rect>
   </property>
   <property name="windowTitle">
-   <string>GUIbase</string>
+   <string>Myth</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="../../res.qrc">
+    <normaloff>:/Icons/res/icons/AppIcon.png</normaloff>:/Icons/res/icons/AppIcon.png</iconset>
+  </property>
+  <property name="locale">
+   <locale language="English" country="UnitedStates"/>
   </property>
   <widget class="QWidget" name="centralWidget">
    <widget class="QTabWidget" name="tabWidget">
     <property name="geometry">
      <rect>
-      <x>10</x>
-      <y>10</y>
-      <width>381</width>
-      <height>221</height>
+      <x>40</x>
+      <y>40</y>
+      <width>921</width>
+      <height>571</height>
      </rect>
     </property>
     <property name="cursor">
@@ -35,14 +42,47 @@
     <property name="currentIndex">
      <number>0</number>
     </property>
-    <widget class="QWidget" name="tab">
+    <widget class="QWidget" name="tabDiary">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="sizeIncrement">
+      <size>
+       <width>0</width>
+       <height>0</height>
+      </size>
+     </property>
+     <property name="baseSize">
+      <size>
+       <width>0</width>
+       <height>0</height>
+      </size>
+     </property>
+     <property name="font">
+      <font>
+       <strikeout>false</strikeout>
+      </font>
+     </property>
      <attribute name="title">
-      <string>Tab 1</string>
+      <string>Diary</string>
      </attribute>
+     <widget class="QListView" name="tableDay">
+      <property name="geometry">
+       <rect>
+        <x>60</x>
+        <y>30</y>
+        <width>791</width>
+        <height>401</height>
+       </rect>
+      </property>
+     </widget>
     </widget>
-    <widget class="QWidget" name="tab_2">
+    <widget class="QWidget" name="tabObjectives">
      <attribute name="title">
-      <string>Tab 2</string>
+      <string>Objectives</string>
      </attribute>
     </widget>
    </widget>
@@ -52,7 +92,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>400</width>
+     <width>1000</width>
      <height>29</height>
     </rect>
    </property>
@@ -60,6 +100,15 @@
     <property name="title">
      <string>Fi&amp;le</string>
     </property>
+    <widget class="QMenu" name="menuNew">
+     <property name="title">
+      <string>New</string>
+     </property>
+     <addaction name="actionSMART_Objective"/>
+    </widget>
+    <addaction name="menuNew"/>
+    <addaction name="actionOpen"/>
+    <addaction name="actionOpen_Last"/>
    </widget>
    <widget class="QMenu" name="menuView">
     <property name="title">
@@ -72,8 +121,15 @@
     </property>
     <addaction name="actionMyth"/>
    </widget>
+   <widget class="QMenu" name="menuReport">
+    <property name="title">
+     <string>&amp;Report</string>
+    </property>
+    <addaction name="actiong"/>
+   </widget>
    <addaction name="menuFile"/>
    <addaction name="menuView"/>
+   <addaction name="menuReport"/>
    <addaction name="menuAbout"/>
   </widget>
   <widget class="QToolBar" name="mainToolBar">
@@ -87,11 +143,36 @@
   <widget class="QStatusBar" name="statusBar"/>
   <action name="actionMyth">
    <property name="text">
-    <string>Myth</string>
+    <string>&amp;Myth</string>
+   </property>
+  </action>
+  <action name="actionOpen">
+   <property name="text">
+    <string>Open</string>
+   </property>
+  </action>
+  <action name="actionSMART_Objective">
+   <property name="text">
+    <string>SMART Objective</string>
+   </property>
+  </action>
+  <action name="actionOpen_Last">
+   <property name="text">
+    <string>Open Last</string>
+   </property>
+   <property name="toolTip">
+    <string>Open last Myth agenda</string>
+   </property>
+  </action>
+  <action name="actiong">
+   <property name="text">
+    <string>Begin of day</string>
    </property>
   </action>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
- <resources/>
+ <resources>
+  <include location="../../res.qrc"/>
+ </resources>
  <connections/>
 </ui>
